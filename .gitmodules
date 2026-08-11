@@ -1,0 +1,3 @@
+[submodule "santander-java"]
+	path = santander-java
+	url = https://github.com/ricardorodrigues-60hz/santander-java
