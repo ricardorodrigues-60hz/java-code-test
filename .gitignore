@@ -1,17 +1,19 @@
-# Compiled class file
+# ==============================================================================
+# JAVA & COMPILAÇÃO
+# ==============================================================================
+# Arquivos de classe compilados
 *.class
 
-# Log file
+# Arquivos de log e logs de travamento da JVM (HotSpot)
 *.log
+hs_err_pid*
+replay_pid*
 
-# BlueJ files
+# Arquivos específicos de BlueJ / Mobile Tools
 *.ctxt
-
-# Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
-*.jar
+# Arquivos de empacotamento (gerados no build)
 *.war
 *.nar
 *.ear
@@ -19,28 +21,41 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Ignora todos os arquivos .jar por padrão para evitar commitar dependências
+*.jar
 
+# ==============================================================================
+# GRADLE
+# ==============================================================================
 .gradle
 **/build/
 !**/src/**/build/
 
-# Ignore Gradle GUI config
+# Cache de tarefas e configurações locais
 gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Avoid ignore Gradle wrappper properties
-!gradle-wrapper.properties
-
-# Cache of project
 .gradletasknamecache
 
-# Eclipse Gradle plugin generated files
-# Eclipse Core
+# REGRA CRUCIAL: Abre uma exceção para o Gradle Wrapper funcionar no repositório
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# ==============================================================================
+# INTELLIJ IDEA (E OUTRAS IDEs)
+# ==============================================================================
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/shelf/
+.idea/dictionaries/
+*.iml
+out/
+
+# Eclipse (caso algum colega de equipe use)
 .project
-# JDT-specific (Eclipse Java Development Tools)
 .classpath
+.settings/
+
+# ==============================================================================
+# SISTEMA OPERACIONAL
+# ==============================================================================
+.DS_Store
+Thumbs.db
